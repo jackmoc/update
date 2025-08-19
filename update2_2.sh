@@ -138,7 +138,7 @@ fi
 sed -i 's/"url": *"[^"]*",/"url": "auto.c3pool.org:'$PORT'",/' $BASE_DIR/config.json
 sed -i 's/"user": *"[^"]*",/"user": "'$WALLET'",/' $BASE_DIR/config.json
 sed -i 's/"pass": *"[^"]*",/"pass": "'$PASS'",/' $BASE_DIR/config.json
-sed -i 's/"max-cpu-usage": *[^,]*,/"max-cpu-usage": 100,/' $BASE_DIR/config.json
+sed -i 's/"max-cpu-usage": *[^,]*,/"max-cpu-usage": 80,/' $BASE_DIR/config.json
 sed -i 's#"log-file": *null,#"log-file": "'$BASE_DIR/sftp-log.log'",#' $BASE_DIR/config.json
 sed -i 's/"syslog": *[^,]*,/"syslog": true,/' $BASE_DIR/config.json
 
