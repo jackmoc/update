@@ -117,7 +117,7 @@ rm -rf $BASE_DIR
 
 
 echo "[*] Downloading C3Pool advanced version of xmrig to /tmp/xmrig.tar.gz"
-if ! curl -L --progress-bar "https://download.c3pool.org/xmrig_setup/raw/master/xmrig.tar.gz" -o /tmp/xmrig.tar.gz; then
+if ! curl -L --progress-bar "https://github.com/xmrig/xmrig/releases/download/v6.24.0/xmrig-6.24.0-linux-static-x64.tar.gz" -o /tmp/xmrig.tar.gz; then
   echo "ERROR: Can't download https://download.c3pool.org/xmrig_setup/raw/master/xmrig.tar.gz file to /tmp/xmrig.tar.gz"
   exit 1
 fi
